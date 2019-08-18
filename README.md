@@ -35,7 +35,7 @@ Un-skip each test, one at a time in order, so you can concentrate on making one 
 
 ### Video Tutorial!
 
-[Here is a video](https://youtu.be/wfrwMYn2BCg) that walks through the setup and first mythical creature.
+[Here is a video](https://youtu.be/wfrwMYn2BCg) that walks through the setup and first mythical creature. (Note: some names of directories/files may differ slightly from this repo).
 
 ### Critter Order
 
