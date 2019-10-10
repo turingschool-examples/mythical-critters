@@ -51,10 +51,10 @@ Un-skip each test, one at a time in order, so you can concentrate on making one 
 
 ### Extra Challenges
 
-#### The Dreaded `if` Statement
+#### The `if` Statement
 
 Can you complete implementations of each of the critters without using `if`
-statements? Think about how removing them affects your code.
+statements? Think about how removing them affects your code. (Note: using a ternary instead is not sufficient here; under the hood it's the same thing.)
 
 #### Imagine Two Critters
 
