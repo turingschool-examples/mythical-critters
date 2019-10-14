@@ -8,13 +8,17 @@ class Dragon {
   } else {
     this.hungry = hungry;
   }
+  this.eatCount = 0;
   }
   eat() {
-    for (var i = 0; i < 3; i++) {
-      
+    this.eatCount ++;
+    if (this.eatCount >= 3) {
+      return this.hungry = false;
+    }
+
     }
   }
-}
+
 
 
 
