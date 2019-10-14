@@ -55,15 +55,15 @@ describe('Hobbit', function() {
     timeTravel(33, hobbit);
     assert.equal(hobbit.age, 33);
     assert.equal(hobbit.adult, true);
-    console.log(this.adult);
+
   });
 
-  it.skip('should be short', function() {
+  it('should be short', function() {
     var hobbit = new Hobbit('Samwise');
     assert.equal(hobbit.isShort, true)
   });
 
-  it.skip('should be considered old at the age of 101', function() {
+  it('should be considered old at the age of 101', function() {
     var hobbit = new Hobbit('Samwise');
     assert.equal(hobbit.old, false)
 
@@ -74,10 +74,9 @@ describe('Hobbit', function() {
     assert.equal(hobbit.old, true)
   });
 
-  it.skip('should have the ring if its name is Frodo', function() {
+  it('should have the ring if its name is Frodo', function() {
     var hobbit1 = new Hobbit('Frodo');
     var hobbit2 = new Hobbit('Samwise');
-
     assert.equal(hobbit1.hasRing, true)
     assert.equal(hobbit2.hasRing, false)
   });
