@@ -4,8 +4,12 @@ Each exercise emphasizes the fundamentals of object oriented programming in Java
 
 ## Installation Steps
 
-1. While in the root of this repository, run `npm install` in your terminal
-2. Test that the unit tests are working: Run the command `npm test test/unicorn-test.js` in your terminal
+1. Click the green `Clone` button, then copy and paste the SSH link provided.
+2. In your terminal, navigate to your Mod 1 practice directory.
+3. Run `git clone _____` (in place of that empty space, use `cmd + v` to paste in the link you copied.
+4. Run `cd mythical-critters` to enter the repository.
+5. While in the root of this repository, run `npm install` in your terminal
+6. Test that the unit tests are working: Run the command `npm test test/unicorn-test.js` in your terminal
 
 You should see something like:
 
@@ -29,9 +33,9 @@ You should see something like:
 
 ### Running the Tests
 
-Most of the tests are skipped. When you see `it.skip('should be a function', () => {` in a test, it means that test has been skipped. They are skipped for a good reason - that way, when you run the test suite for the first time, you don't see tons of errors screaming at you in the terminal.
+Most of the tests are skipped. When you see `it.skip('should be a function', function() {` in a test, it means that test has been skipped. They are skipped for a good reason - that way, when you run the test suite for the first time, you don't see tons of errors screaming at you in the terminal.
 
-Un-skip each test, one at a time in order, so you can concentrate on making one test pass. Un-skip the test by deleting the `.skip` from the test's first line so it should look more like `it('should be a function', () => {`. Run the test to see what kind of error you are getting, and then implement the code to make the test pass!
+Un-skip each test, one at a time in order, so you can concentrate on making one test pass. Un-skip the test by deleting the `.skip` from the test's first line so it should look more like `it('should be a function', function() {`. Run the test to see what kind of error you are getting, and then implement the code to make the test pass!
 
 ### Video Tutorial!
 
