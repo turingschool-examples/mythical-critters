@@ -9,7 +9,7 @@ describe('Sphinx', function() {
   it('should have no name', function() {
     var sphinx = new Sphinx();
 
-    assert.equal(sphinx.name, null);
+    assert.deepEqual(sphinx.name, null);
   });
 
   it('should start with no riddles', function() {
@@ -140,6 +140,43 @@ describe('Sphinx', function() {
     assert.deepEqual(sphinx.riddles, [riddle1, riddle2, riddle3]);
     assert.equal(sphinx.heroesEaten, 1);
   });
+
+  it('should not eat a hero if they get the answer correct', function() {
+    var sphinx = new Sphinx();
+    var riddle1 = {
+      riddle: 'What word becomes shorter when you add two letters to it?',
+      answer: 'short'
+    };
+    var riddle2 = {
+      riddle: 'How far can a fox run into a grove?',
+      answer: 'Halfway, after that it\'s running out.'
+    };
+    var riddle3 = {
+      riddle: 'What starts with an \'e\' and ends with an \'e\' and contains one letter?',
+      answer: 'An envelope'
+    };
+
+    sphinx.collectRiddle(riddle1);
+    sphinx.collectRiddle(riddle2);
+    sphinx.collectRiddle(riddle3);
+    sphinx.attemptAnswer('short');
+
+    assert.deepEqual(sphinx.riddles, [riddle2, riddle3]);
+    assert.equal(sphinx.heroesEaten, 0);
+  })
+
+  it('should laugh mercilessly if the hero gets the answer wrong', function() {
+    var sphinx = new Sphinx();
+    var riddle1 = {
+      riddle: 'What word becomes shorter when you add two letters to it?',
+      answer: 'short'
+    };
+
+    sphinx.collectRiddle(riddle1);
+    var response = sphinx.attemptAnswer('e')
+
+    assert.equal(response, "Haha! Puny human, you look delicious")
+  })
 
   it('should scream with rage if a hero gets all riddles correct', function() {
     var sphinx = new Sphinx();
